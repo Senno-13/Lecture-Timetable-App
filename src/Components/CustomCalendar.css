@@ -1,0 +1,29 @@
+.rbc-event-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .rbc-event-label {
+    display: none;
+  }
+  
+  .rbc-time-header {
+    position: relative;
+  }
+
+  
+  
+  

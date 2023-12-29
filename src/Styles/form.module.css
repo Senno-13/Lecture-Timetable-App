@@ -1,0 +1,142 @@
+:root {
+  --main-color: #5454e6;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #bebee7 50%, #c56666 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: (100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 30px;
+}
+
+.form {
+  width: 50%;
+  border-right: 1px solid #fff;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: transparent;
+  transition: 0.4s;
+  z-index: 100;
+}
+
+.form:hover {
+  box-shadow: 0px 0px 10px 2px #fff;
+  border: none;
+}
+
+.form h1 {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.form input {
+  transition: 0.3s;
+  position: relative;
+}
+.form button {
+  background-color: var(--main-color);
+  color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  transition: 0.3s;
+}
+.form button:hover {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 50%;
+}
+.form button:active {
+  letter-spacing: 1.2px;
+  transform: scale(1.1);
+}
+.form input:focus {
+  border: none;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px 1px #fff;
+}
+.form input:focus + label {
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  transition: 0.3s;
+}
+
+.form .error {
+  color: rgb(206, 11, 11);
+  text-transform: lowercase;
+  font-size: 14px;
+  font-style: italic;
+  margin: 3px;
+  font-weight: 500;
+  display: block;
+  position: relative;
+}
+.form .error::before {
+  position: absolute;
+  content: "*";
+  left: -7px;
+}
+
+.image {
+  width: 50%;
+  text-align: center;
+}
+.image img {
+  max-width: 50%;
+  margin-left: auto;
+}
+
+.select {
+  margin: 10px 10px 10px 0;
+  padding: 10px;
+  border-radius: 2px;
+  padding: 0;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.select option {
+  width: 100%;
+  padding: 5px 10px;
+  transition: 0.3s;
+  position: relative;
+}
+.select option:checked {
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.select option:checked::after {
+  position: absolute;
+  content: "";
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #000;
+}
+
+@media (max-width: 767px) {
+  .image img {
+    max-width: 70%;
+  }
+}
